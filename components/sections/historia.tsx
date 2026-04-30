@@ -59,20 +59,20 @@ export function HistoriaSection() {
             {/* Contenedor de imagen */}
             <div className="relative z-10 rounded-3xl overflow-hidden aspect-[4/5] bg-brand-navy/10">
               <Image
-                src="/images/historia-chef.jpg"
+                src="/images/chef.jpg"
                 alt="Chef Andrés Maturana en la cocina de La Cevichería del Mar"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               {/* Fallback gradient visible mientras no hay imagen */}
-              <div
+              {/* <div
                 className="absolute inset-0"
                 style={{
                   background:
                     "linear-gradient(135deg, #1E3A5F 0%, #2A4D7A 40%, #D4A24C 100%)",
                 }}
-              />
+              /> */}
             </div>
 
             {/* Badge flotante */}

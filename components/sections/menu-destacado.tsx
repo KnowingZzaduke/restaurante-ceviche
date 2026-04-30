@@ -59,11 +59,11 @@ function DishCard({
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
         {/* Gradient fallback */}
-        <div
+        {/* <div
           className="absolute inset-0 transition-opacity duration-300"
           style={{ background: item.gradient }}
           aria-hidden="true"
-        />
+        /> */}
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-300" />
 
