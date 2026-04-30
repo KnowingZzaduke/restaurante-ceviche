@@ -1,9 +1,9 @@
 "use client"
 
 import { useLocale, useTranslations } from "next-intl"
-import { useRouter, usePathname } from "next/navigation"
 import { useTransition } from "react"
 import { cn } from "@/lib/utils"
+import { useRouter, usePathname } from "@/navigation"
 
 interface LanguageToggleProps {
   className?: string
@@ -19,10 +19,7 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
   const handleSwitch = () => {
     const nextLocale = locale === "es" ? "en" : "es"
     startTransition(() => {
-      // Strip current locale prefix if present, then add new one
-      const pathWithoutLocale = pathname.replace(/^\/(en|es)/, "") || "/"
-      const newPath = nextLocale === "es" ? pathWithoutLocale : `/en${pathWithoutLocale}`
-      router.replace(newPath)
+      router.replace(pathname, { locale: nextLocale })
     })
   }
 
@@ -30,7 +27,7 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
     <button
       onClick={handleSwitch}
       disabled={isPending}
-      aria-label="Cambiar idioma"
+      aria-label="Cambiar idioma / Switch language"
       className={cn(
         "h-8 px-2.5 rounded-lg text-xs font-semibold tracking-wider transition-colors",
         "border border-current/20 hover:bg-foreground/8",

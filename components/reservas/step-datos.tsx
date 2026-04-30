@@ -168,7 +168,7 @@ export function StepDatos({
         <label htmlFor="politicas" className="text-sm text-muted-foreground cursor-pointer leading-snug">
           {t("politicas")}.{" "}
           <a href="#" className="text-brand-navy dark:text-brand-gold underline">
-            Leer políticas
+            {t("leerPoliticas")}
           </a>
         </label>
       </div>

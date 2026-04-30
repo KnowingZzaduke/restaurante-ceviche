@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 import { Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { generateReservationCode, saveReservation } from "@/lib/availability"
@@ -71,6 +71,7 @@ const slideVariants = {
 
 /* ── Main form ──────────────────────────────────── */
 export function ReservationForm() {
+  const locale = useLocale()
   const [step, setStep] = useState<1 | 2 | 3>(1)
   const [direction, setDirection] = useState(1)
   const [confirmed, setConfirmed] = useState<ReservationData | null>(null)
@@ -123,8 +124,9 @@ export function ReservationForm() {
     })
 
     setConfirmed(reservation)
-    toast.success(`¡Reserva confirmada! Código: ${code}`, {
-      description: `${date?.toLocaleDateString("es-CO")} a las ${time}`,
+    const dateLocale = locale === "en" ? "en-US" : "es-CO"
+    toast.success(`${code}`, {
+      description: `${date?.toLocaleDateString(dateLocale)} · ${time}`,
       duration: 6000,
     })
 

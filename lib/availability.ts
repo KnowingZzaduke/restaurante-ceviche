@@ -49,43 +49,6 @@ export function saveReservation(data: object): void {
   localStorage.setItem("lcm_reservations", JSON.stringify([...existing, data]))
 }
 
-/** Construye la URL de Google Calendar */
-export function buildGoogleCalendarUrl(params: {
-  date: Date
-  time: string
-  guests: number
-  code: string
-  zone: string
-}): string {
-  const { date, time, guests, code, zone } = params
-  const [h, min] = time.split(":").map(Number)
-
-  const start = new Date(date)
-  start.setHours(h, min, 0, 0)
-  const end = new Date(start)
-  end.setHours(end.getHours() + 2)
-
-  const fmt = (d: Date) =>
-    d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z"
-
-  const zoneLabel =
-    zone === "sala"
-      ? "Sala interior"
-      : zone === "terraza"
-        ? "Terraza"
-        : "Sin preferencia de zona"
-
-  const p = new URLSearchParams({
-    action: "TEMPLATE",
-    text: "Reserva — La Cevichería del Mar",
-    dates: `${fmt(start)}/${fmt(end)}`,
-    details: `Código de reserva: ${code}\nMesa para ${guests} persona${guests !== 1 ? "s" : ""}\nZona: ${zoneLabel}`,
-    location: "Calle del Cuartel #36-77, Centro Histórico, Cartagena de Indias",
-  })
-
-  return `https://calendar.google.com/calendar/render?${p.toString()}`
-}
-
 /** Construye la URL de WhatsApp con resumen de reserva */
 export function buildWhatsAppShareUrl(params: {
   date: Date

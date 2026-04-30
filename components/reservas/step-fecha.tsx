@@ -1,12 +1,12 @@
 "use client"
 
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 import { Calendar } from "@/components/ui/calendar"
 import { cn } from "@/lib/utils"
 import { getSlotAvailability } from "@/lib/availability"
 import { TIME_SLOTS, type ReservationZone } from "@/types/reservation"
 import { Minus, Plus } from "lucide-react"
-import { es } from "date-fns/locale"
+import { es, enUS } from "date-fns/locale"
 
 interface StepFechaProps {
   date: Date | undefined
@@ -20,12 +20,6 @@ interface StepFechaProps {
   onNext: () => void
 }
 
-const ZONES: { value: ReservationZone; label: string; emoji: string }[] = [
-  { value: "sala", label: "Sala interior", emoji: "🏛️" },
-  { value: "terraza", label: "Terraza", emoji: "🌴" },
-  { value: "sin-preferencia", label: "Sin preferencia", emoji: "✨" },
-]
-
 export function StepFecha({
   date,
   time,
@@ -38,6 +32,8 @@ export function StepFecha({
   onNext,
 }: StepFechaProps) {
   const t = useTranslations("reservas.fecha")
+  const locale = useLocale()
+  const calLocale = locale === "en" ? enUS : es
 
   const availability = date ? getSlotAvailability(date) : {}
   const canContinue = !!date && !!time
@@ -49,19 +45,25 @@ export function StepFecha({
     return d < today
   }
 
+  const zones: { value: ReservationZone; label: string; emoji: string }[] = [
+    { value: "sala", label: t("zonaSala"), emoji: "🏛️" },
+    { value: "terraza", label: t("zonaTerr"), emoji: "🌴" },
+    { value: "sin-preferencia", label: t("zonaSin"), emoji: "✨" },
+  ]
+
   return (
     <div className="space-y-6">
       {/* ── Calendario ── */}
       <div>
         <p className="text-sm font-semibold text-foreground mb-3">
-          Selecciona una fecha
+          {t("selecciona")}
         </p>
         <div className="flex justify-center">
           <Calendar
             mode="single"
             selected={date}
             onSelect={onDateChange}
-            locale={es}
+            locale={calLocale}
             disabled={(d) => isPast(d) || isMonday(d)}
             className="rounded-2xl border border-border bg-card p-3"
           />
@@ -77,7 +79,7 @@ export function StepFecha({
       {date && (
         <div>
           <p className="text-sm font-semibold text-foreground mb-3">
-            Elige un horario
+            {t("horarioTitle")}
           </p>
           <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
             {TIME_SLOTS.map((slot) => {
@@ -103,23 +105,19 @@ export function StepFecha({
               )
             })}
           </div>
-          <p className="text-xs text-muted-foreground mt-2">
-            Los horarios en gris no están disponibles para la fecha seleccionada.
-          </p>
+          <p className="text-xs text-muted-foreground mt-2">{t("horarioHint")}</p>
         </div>
       )}
 
       {/* ── Personas ── */}
       <div>
-        <p className="text-sm font-semibold text-foreground mb-3">
-          {t("personas")}
-        </p>
+        <p className="text-sm font-semibold text-foreground mb-3">{t("personas")}</p>
         <div className="flex items-center gap-4">
           <button
             type="button"
             onClick={() => onGuestsChange(Math.max(1, guests - 1))}
-            className="w-10 h-10 rounded-xl border border-border bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors disabled:opacity-50"
             disabled={guests <= 1}
+            className="w-10 h-10 rounded-xl border border-border bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors disabled:opacity-50"
           >
             <Minus size={16} />
           </button>
@@ -129,24 +127,22 @@ export function StepFecha({
           <button
             type="button"
             onClick={() => onGuestsChange(Math.min(12, guests + 1))}
-            className="w-10 h-10 rounded-xl border border-border bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors disabled:opacity-50"
             disabled={guests >= 12}
+            className="w-10 h-10 rounded-xl border border-border bg-muted hover:bg-muted/80 flex items-center justify-center transition-colors disabled:opacity-50"
           >
             <Plus size={16} />
           </button>
           <span className="text-sm text-muted-foreground">
-            persona{guests !== 1 ? "s" : ""} · máx. 12
+            {t("personasSuffix")} · {t("personasMax")}
           </span>
         </div>
       </div>
 
       {/* ── Zona ── */}
       <div>
-        <p className="text-sm font-semibold text-foreground mb-3">
-          {t("zona")}
-        </p>
+        <p className="text-sm font-semibold text-foreground mb-3">{t("zona")}</p>
         <div className="grid grid-cols-3 gap-2">
-          {ZONES.map(({ value, label, emoji }) => (
+          {zones.map(({ value, label, emoji }) => (
             <button
               key={value}
               type="button"
