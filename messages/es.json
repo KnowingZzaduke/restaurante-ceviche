@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "menu": "Menú",
+    "galeria": "Galería",
+    "nosotros": "Nosotros",
+    "contacto": "Contacto",
+    "reservar": "Reservar",
+    "langSwitch": "EN"
+  },
+  "hero": {
+    "pretitle": "Centro Histórico de Cartagena",
+    "title": "Sabores del Caribe,",
+    "titleAccent": "alma del Pacífico",
+    "subtitle": "Fusión peruana-colombiana a orillas del mar. Mariscos frescos, ceviches auténticos y cocteles tropicales en el corazón de la Ciudad Amurallada.",
+    "ctaPrimary": "Reservar mesa",
+    "ctaSecondary": "Ver menú",
+    "badge": "4.9 en Tripadvisor · 250+ reseñas",
+    "whatsapp": "Reservar por WhatsApp",
+    "scroll": "Desplaza hacia abajo"
+  },
+  "historia": {
+    "pretitle": "Nuestra historia",
+    "title": "Donde el Caribe se encuentra con el Pacífico",
+    "p1": "La Cevichería del Mar nació en 2013 de la pasión del chef Andrés Maturana por fusionar dos cocinas que siempre le robaron el corazón: la vibrante gastronomía peruana con su leche de tigre y sus ajíes, y la riqueza marina de la costa caribeña colombiana.",
+    "p2": "Instalados en una casona colonial restaurada en el Centro Histórico de Cartagena, cada plato es un homenaje a los dos océanos. Ingredientes locales de mercado, técnicas de alta cocina y la calidez del Caribe hacen de cada visita una experiencia que se recuerda.",
+    "stat1Value": "12",
+    "stat1Label": "años creando experiencias",
+    "stat2Value": "200+",
+    "stat2Label": "recetas en nuestra historia",
+    "stat3Value": "5",
+    "stat3Label": "chefs especializados"
+  },
+  "menu": {
+    "pretitle": "Nuestra cocina",
+    "title": "Lo mejor de nuestra carta",
+    "subtitle": "Ingredientes frescos del Caribe, técnicas de autor y el sabor auténtico de dos cocinas.",
+    "tabEntradas": "Entradas",
+    "tabPrincipales": "Principales",
+    "tabPostres": "Postres",
+    "tabCocteles": "Cócteles",
+    "verCompleto": "Ver menú completo",
+    "tags": {
+      "especialidad": "Especialidad",
+      "nuevo": "Nuevo",
+      "vegetariano": "Vegetariano",
+      "picante": "Picante"
+    }
+  },
+  "reservas": {
+    "pretitle": "Reservaciones",
+    "title": "Reserva tu mesa",
+    "subtitle": "Disfruta una experiencia única en el corazón del centro histórico de Cartagena.",
+    "badge": "Confirmación en menos de 1 hora",
+    "step1": "Fecha y hora",
+    "step2": "Tus datos",
+    "step3": "Confirmación",
+    "fecha": {
+      "title": "Elige fecha y hora",
+      "personas": "Número de personas",
+      "zona": "Zona preferida",
+      "zonaSala": "Sala interior",
+      "zonaTerr": "Terraza",
+      "zonaSin": "Sin preferencia",
+      "noDisp": "No disponible",
+      "btnSig": "Continuar",
+      "cerrado": "Cerrado (lunes)",
+      "selecciona": "Selecciona una fecha"
+    },
+    "datos": {
+      "title": "Tus datos",
+      "nombre": "Nombre completo",
+      "telefono": "Teléfono",
+      "email": "Correo electrónico",
+      "ocasion": "Ocasión especial (opcional)",
+      "comentarios": "Comentarios adicionales (opcional)",
+      "politicas": "Acepto las políticas de reserva y cancelación",
+      "btnSig": "Confirmar reserva",
+      "btnVolver": "Volver",
+      "ocNinguna": "Ninguna",
+      "ocCumple": "Cumpleaños",
+      "ocAniv": "Aniversario",
+      "ocRom": "Cita romántica",
+      "ocNeg": "Negocios",
+      "ocOtra": "Otra ocasión"
+    },
+    "confirmacion": {
+      "titulo": "¡Reserva confirmada!",
+      "subtitulo": "Te hemos enviado un email de confirmación a",
+      "codigo": "Código de reserva",
+      "resumen": "Resumen de tu reserva",
+      "fecha": "Fecha",
+      "hora": "Hora",
+      "personas": "Personas",
+      "zona": "Zona",
+      "nombre": "Nombre",
+      "telefono": "Teléfono",
+      "ocasion": "Ocasión",
+      "btnCalendar": "Agregar a Google Calendar",
+      "btnWhatsApp": "Compartir por WhatsApp",
+      "btnInicio": "Volver al inicio",
+      "nota": "Si necesitas modificar tu reserva, contáctanos al"
+    }
+  },
+  "galeria": {
+    "pretitle": "Galería",
+    "title": "Una experiencia que entra por los ojos",
+    "subtitle": "El ambiente de La Cevichería del Mar, nuestros platos y los momentos que hacen especial cada visita.",
+    "verInstagram": "Ver más en Instagram"
+  },
+  "experiencia": {
+    "pretitle": "Servicios especiales",
+    "title": "Más que una cena",
+    "card1Title": "Eventos privados",
+    "card1Desc": "Capacidad para grupos de hasta 30 personas. Menús personalizados, decoración y servicio exclusivo para tu celebración.",
+    "card2Title": "Menú degustación",
+    "card2Desc": "7 tiempos creados por nuestro chef ejecutivo. Un recorrido sensorial por los sabores del Caribe y el Pacífico.",
+    "card3Title": "Maridaje de vinos",
+    "card3Desc": "Selección curada por nuestro sumiller certificado. Vinos de Colombia, Chile y España para acompañar cada plato."
+  },
+  "testimonios": {
+    "pretitle": "Lo que dicen nuestros clientes",
+    "title": "Experiencias que hablan por sí solas"
+  },
+  "ubicacion": {
+    "pretitle": "Encuéntranos",
+    "title": "En el corazón de Cartagena",
+    "direccion": "Calle del Cuartel #36-77, Centro Histórico",
+    "ciudad": "Cartagena de Indias, Colombia",
+    "horarios": "Horarios",
+    "horariosDet": "Martes a domingo: 12:00 PM – 11:00 PM",
+    "cerrado": "Cerrado los lunes",
+    "telefono": "Teléfono",
+    "email": "Reservas",
+    "formTitle": "Envíanos un mensaje",
+    "formNombre": "Nombre",
+    "formEmail": "Correo electrónico",
+    "formMensaje": "Mensaje",
+    "formEnviar": "Enviar mensaje",
+    "formExito": "Mensaje enviado. Te respondemos pronto."
+  },
+  "footer": {
+    "desc": "Fusión peruana-colombiana en el corazón del Centro Histórico de Cartagena.",
+    "colMenu": "Menú",
+    "colReservas": "Reservas",
+    "colContacto": "Contacto",
+    "colRedes": "Síguenos",
+    "newsletter": "Suscríbete a nuestras novedades",
+    "newsletterPlaceholder": "Tu correo electrónico",
+    "newsletterBtn": "Suscribirse",
+    "newsletterOk": "¡Gracias! Ya estás suscrito.",
+    "legal": "© {year} La Cevichería del Mar. Todos los derechos reservados.",
+    "credito": "Sitio diseñado por"
+  }
+}

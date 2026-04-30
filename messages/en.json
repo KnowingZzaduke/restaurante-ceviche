@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "menu": "Menu",
+    "galeria": "Gallery",
+    "nosotros": "About",
+    "contacto": "Contact",
+    "reservar": "Reserve",
+    "langSwitch": "ES"
+  },
+  "hero": {
+    "pretitle": "Historic Center of Cartagena",
+    "title": "Caribbean flavors,",
+    "titleAccent": "Pacific soul",
+    "subtitle": "Peruvian-Colombian fusion by the sea. Fresh seafood, authentic ceviches and tropical cocktails in the heart of the Walled City.",
+    "ctaPrimary": "Reserve a table",
+    "ctaSecondary": "View menu",
+    "badge": "4.9 on Tripadvisor · 250+ reviews",
+    "whatsapp": "Reserve via WhatsApp",
+    "scroll": "Scroll down"
+  },
+  "historia": {
+    "pretitle": "Our story",
+    "title": "Where the Caribbean meets the Pacific",
+    "p1": "La Cevichería del Mar was born in 2013 from chef Andrés Maturana's passion for fusing two cuisines that always captured his heart: the vibrant Peruvian gastronomy with its leche de tigre and ajíes, and the marine richness of the Colombian Caribbean coast.",
+    "p2": "Set in a restored colonial mansion in the Historic Center of Cartagena, every dish is a tribute to two oceans. Local market ingredients, fine dining techniques and Caribbean warmth make every visit an unforgettable experience.",
+    "stat1Value": "12",
+    "stat1Label": "years creating experiences",
+    "stat2Value": "200+",
+    "stat2Label": "recipes in our history",
+    "stat3Value": "5",
+    "stat3Label": "specialized chefs"
+  },
+  "menu": {
+    "pretitle": "Our kitchen",
+    "title": "The best of our menu",
+    "subtitle": "Fresh Caribbean ingredients, signature techniques and the authentic flavor of two cuisines.",
+    "tabEntradas": "Starters",
+    "tabPrincipales": "Mains",
+    "tabPostres": "Desserts",
+    "tabCocteles": "Cocktails",
+    "verCompleto": "View full menu",
+    "tags": {
+      "especialidad": "Signature",
+      "nuevo": "New",
+      "vegetariano": "Vegetarian",
+      "picante": "Spicy"
+    }
+  },
+  "reservas": {
+    "pretitle": "Reservations",
+    "title": "Reserve your table",
+    "subtitle": "Enjoy a unique experience in the heart of Cartagena's historic center.",
+    "badge": "Confirmation in less than 1 hour",
+    "step1": "Date & time",
+    "step2": "Your details",
+    "step3": "Confirmation",
+    "fecha": {
+      "title": "Choose date & time",
+      "personas": "Number of guests",
+      "zona": "Preferred area",
+      "zonaSala": "Indoor dining room",
+      "zonaTerr": "Terrace",
+      "zonaSin": "No preference",
+      "noDisp": "Not available",
+      "btnSig": "Continue",
+      "cerrado": "Closed (Monday)",
+      "selecciona": "Select a date"
+    },
+    "datos": {
+      "title": "Your details",
+      "nombre": "Full name",
+      "telefono": "Phone number",
+      "email": "Email address",
+      "ocasion": "Special occasion (optional)",
+      "comentarios": "Additional comments (optional)",
+      "politicas": "I accept the reservation and cancellation policies",
+      "btnSig": "Confirm reservation",
+      "btnVolver": "Back",
+      "ocNinguna": "None",
+      "ocCumple": "Birthday",
+      "ocAniv": "Anniversary",
+      "ocRom": "Romantic date",
+      "ocNeg": "Business",
+      "ocOtra": "Other occasion"
+    },
+    "confirmacion": {
+      "titulo": "Reservation confirmed!",
+      "subtitulo": "We've sent a confirmation email to",
+      "codigo": "Reservation code",
+      "resumen": "Your reservation summary",
+      "fecha": "Date",
+      "hora": "Time",
+      "personas": "Guests",
+      "zona": "Area",
+      "nombre": "Name",
+      "telefono": "Phone",
+      "ocasion": "Occasion",
+      "btnCalendar": "Add to Google Calendar",
+      "btnWhatsApp": "Share via WhatsApp",
+      "btnInicio": "Back to home",
+      "nota": "To modify your reservation, contact us at"
+    }
+  },
+  "galeria": {
+    "pretitle": "Gallery",
+    "title": "An experience that enters through the eyes",
+    "subtitle": "The atmosphere of La Cevichería del Mar, our dishes and the moments that make every visit special.",
+    "verInstagram": "See more on Instagram"
+  },
+  "experiencia": {
+    "pretitle": "Special services",
+    "title": "More than a dinner",
+    "card1Title": "Private events",
+    "card1Desc": "Capacity for groups of up to 30 people. Custom menus, decoration and exclusive service for your celebration.",
+    "card2Title": "Tasting menu",
+    "card2Desc": "7 courses created by our executive chef. A sensory journey through the flavors of the Caribbean and Pacific.",
+    "card3Title": "Wine pairing",
+    "card3Desc": "Curated selection by our certified sommelier. Wines from Colombia, Chile and Spain to accompany each dish."
+  },
+  "testimonios": {
+    "pretitle": "What our guests say",
+    "title": "Experiences that speak for themselves"
+  },
+  "ubicacion": {
+    "pretitle": "Find us",
+    "title": "In the heart of Cartagena",
+    "direccion": "Calle del Cuartel #36-77, Historic Center",
+    "ciudad": "Cartagena de Indias, Colombia",
+    "horarios": "Hours",
+    "horariosDet": "Tuesday to Sunday: 12:00 PM – 11:00 PM",
+    "cerrado": "Closed on Mondays",
+    "telefono": "Phone",
+    "email": "Reservations",
+    "formTitle": "Send us a message",
+    "formNombre": "Name",
+    "formEmail": "Email address",
+    "formMensaje": "Message",
+    "formEnviar": "Send message",
+    "formExito": "Message sent. We'll get back to you soon."
+  },
+  "footer": {
+    "desc": "Peruvian-Colombian fusion in the heart of Cartagena's Historic Center.",
+    "colMenu": "Menu",
+    "colReservas": "Reservations",
+    "colContacto": "Contact",
+    "colRedes": "Follow us",
+    "newsletter": "Subscribe to our news",
+    "newsletterPlaceholder": "Your email address",
+    "newsletterBtn": "Subscribe",
+    "newsletterOk": "Thank you! You're now subscribed.",
+    "legal": "© {year} La Cevichería del Mar. All rights reserved.",
+    "credito": "Website designed by"
+  }
+}
