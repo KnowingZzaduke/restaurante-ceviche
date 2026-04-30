@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/sections/hero"
 import { HistoriaSection } from "@/components/sections/historia"
 import { MenuDestacadoSection } from "@/components/sections/menu-destacado"
+import { ReservasSection } from "@/components/sections/reservas"
 import { Footer } from "@/components/shared/footer"
 
 export default function HomePage() {
@@ -9,7 +10,7 @@ export default function HomePage() {
       <HeroSection />
       <HistoriaSection />
       <MenuDestacadoSection />
-      {/* Sesión 3: ReservasSection */}
+      <ReservasSection />
       {/* Sesión 4: GaleriaSection */}
       {/* Sesión 4: ExperienciaSection */}
       {/* Sesión 4: TestimoniosSection */}
