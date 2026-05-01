@@ -60,12 +60,12 @@ function DishCard({
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
-        <div
+        {/* <div
           className="absolute inset-0"
           style={{ background: item.gradient }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" /> */}
         {item.tag && (
           <div className="absolute top-2.5 left-2.5">
             <span className={cn("inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold border", TAG_STYLES[item.tag])}>

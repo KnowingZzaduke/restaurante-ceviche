@@ -95,11 +95,11 @@ export function DishModal({ dish, onClose }: DishModalProps) {
                 sizes="(max-width: 640px) 100vw, 512px"
               />
               {/* Gradient fallback */}
-              <div
+              {/* <div
                 className="absolute inset-0"
                 style={{ background: dish.gradient }}
                 aria-hidden="true"
-              />
+              /> */}
               {/* Overlay degradado para legibilidad del precio */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
 
