@@ -50,7 +50,7 @@ function DishCard({
       aria-label={`Ver detalles de ${name}`}
     >
       {/* Imagen */}
-      <div className="relative h-44 overflow-hidden">
+      <div className="relative h-44 w-full overflow-hidden bg-muted">
         <Image
           src={`/images/menu/${item.id}.jpg`}
           alt={name}

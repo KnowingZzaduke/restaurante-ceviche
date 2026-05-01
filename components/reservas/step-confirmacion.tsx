@@ -160,15 +160,14 @@ export function StepConfirmacion({ data, onReset }: StepConfirmacionProps) {
       oc_otra: t("ocOtra"),
     }
     const html = generateReceiptHTML(data, labels)
-    const blob = new Blob([html], { type: "text/html;charset=utf-8" })
+    const htmlWithPrint = html.replace(
+      "</body>",
+      `<script>window.addEventListener("load",function(){window.print();})</script></body>`
+    )
+    const blob = new Blob([htmlWithPrint], { type: "text/html;charset=utf-8" })
     const url = URL.createObjectURL(blob)
-    const a = document.createElement("a")
-    a.href = url
-    a.download = `reserva-${data.code}.html`
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
+    window.open(url, "_blank")
+    setTimeout(() => URL.revokeObjectURL(url), 60000)
   }
 
   return (

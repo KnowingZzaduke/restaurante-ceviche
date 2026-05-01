@@ -52,7 +52,7 @@ function DishCard({
       onClick={() => onOpen(item)}
       className="group text-left bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg hover:shadow-brand-navy/5 transition-shadow w-full cursor-pointer"
     >
-      <div className="relative h-40 overflow-hidden">
+      <div className="relative h-40 w-full overflow-hidden bg-muted">
         <Image
           src={`/images/menu/${item.id}.jpg`}
           alt={name}

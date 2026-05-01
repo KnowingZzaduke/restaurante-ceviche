@@ -38,9 +38,16 @@ export function Navbar() {
   const handleNavClick = (href: string) => {
     setMobileOpen(false)
     const id = href.split("#")[1]
-    if (!id) return
+    if (!id) {
+      window.location.href = href
+      return
+    }
     const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" })
+    } else {
+      window.location.href = href
+    }
   }
 
   return (
@@ -56,7 +63,13 @@ export function Navbar() {
 
         {/* Logo */}
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            if (document.getElementById("inicio")) {
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            } else {
+              window.location.href = prefix || "/"
+            }
+          }}
           className="flex items-center gap-2 shrink-0"
           aria-label="La Cevichería del Mar - Inicio"
         >

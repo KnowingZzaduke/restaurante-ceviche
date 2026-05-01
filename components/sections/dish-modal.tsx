@@ -86,7 +86,7 @@ export function DishModal({ dish, onClose }: DishModalProps) {
             )}
           >
             {/* Imagen */}
-            <div className="relative h-56 sm:h-64 overflow-hidden">
+            <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-muted">
               <Image
                 src={`/images/menu/${dish.id}.jpg`}
                 alt={name}
