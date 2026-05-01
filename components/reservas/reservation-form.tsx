@@ -94,13 +94,16 @@ export function ReservationForm() {
     setStep(next)
   }
 
-  const handleStep2Submit = (data: {
+  const [sending, setSending] = useState(false)
+
+  const handleStep2Submit = async (data: {
     nombre: string
     telefono: string
     email: string
     ocasion: ReservationOcasion
     comentarios: string
   }) => {
+    setSending(true)
     setNombre(data.nombre)
     setTelefono(data.telefono)
     setEmail(data.email)
@@ -123,13 +126,43 @@ export function ReservationForm() {
       date: reservation.date.toISOString(),
     })
 
-    setConfirmed(reservation)
-    const dateLocale = locale === "en" ? "en-US" : "es-CO"
-    toast.success(`${code}`, {
-      description: `${date?.toLocaleDateString(dateLocale)} · ${time}`,
-      duration: 6000,
-    })
+    try {
+      const res = await fetch("/api/send-reservation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...reservation,
+          date: reservation.date.toISOString(),
+          locale,
+        }),
+      })
 
+      const dateLocale = locale === "en" ? "en-US" : "es-CO"
+      if (res.ok) {
+        toast.success(code, {
+          description: locale === "en"
+            ? `Confirmation sent to ${data.email}`
+            : `Confirmación enviada a ${data.email}`,
+          duration: 6000,
+        })
+      } else {
+        toast.success(code, {
+          description: `${date?.toLocaleDateString(dateLocale)} · ${time}`,
+          duration: 6000,
+        })
+        console.error("Email send failed:", await res.text())
+      }
+    } catch {
+      const dateLocale = locale === "en" ? "en-US" : "es-CO"
+      toast.success(code, {
+        description: `${date?.toLocaleDateString(dateLocale)} · ${time}`,
+        duration: 6000,
+      })
+    } finally {
+      setSending(false)
+    }
+
+    setConfirmed(reservation)
     goTo(3)
   }
 
@@ -195,6 +228,7 @@ export function ReservationForm() {
               email={email}
               ocasion={ocasion}
               comentarios={comentarios}
+              sending={sending}
               onBack={() => goTo(1)}
               onSubmit={handleStep2Submit}
             />
