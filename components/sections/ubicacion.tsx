@@ -38,12 +38,25 @@ export function UbicacionSection() {
     resolver: zodResolver(schema),
   })
 
-  const onSubmit = async () => {
+  const onSubmit = async (data: FormData) => {
     setSending(true)
-    await new Promise(r => setTimeout(r, 900))
-    setSending(false)
-    toast.success(t("formExito"))
-    reset()
+    try {
+      const res = await fetch("/api/send-contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+      if (res.ok) {
+        toast.success(t("formExito"))
+        reset()
+      } else {
+        toast.error(locale === "en" ? "Could not send message. Try again." : "No se pudo enviar el mensaje. Intenta de nuevo.")
+      }
+    } catch {
+      toast.error(locale === "en" ? "Connection error. Try again." : "Error de conexión. Intenta de nuevo.")
+    } finally {
+      setSending(false)
+    }
   }
 
   const INFO = [
