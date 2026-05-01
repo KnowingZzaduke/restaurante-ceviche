@@ -17,6 +17,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://laceviceriadelmar.com"
+  ),
   title: "La Cevichería del Mar",
   description: "Restaurante de mariscos y fusión peruana-colombiana en Cartagena de Indias",
 }
